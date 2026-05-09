@@ -23,7 +23,7 @@ public class Ej11_LetraRepetida {
 
     public static boolean buscarRepetidasJuntas(char[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
-            if (arr[i] == arr[i + 1]) {
+            if (esLetra(arr[i]) && arr[i] == arr[i + 1]) {
                 return true;
             }
         }
@@ -32,13 +32,19 @@ public class Ej11_LetraRepetida {
 
     public static boolean buscarRepetidas(char[] arr) {
         for (int i = 0; i < arr.length; i++) {
-            int letra = arr[i];
-            for (int j = i+1; j < arr.length; j++) {
-                if (arr[j] == letra && j != i) {
-                    return true;
+            if (esLetra(arr[i])) {
+                int letra = arr[i];
+                for (int j = i + 1; j < arr.length; j++) {
+                    if (arr[j] == letra) {
+                        return true;
+                    }
                 }
             }
         }
         return false;
+    }
+
+    public static boolean esLetra(char c) {
+        return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
     }
 }
