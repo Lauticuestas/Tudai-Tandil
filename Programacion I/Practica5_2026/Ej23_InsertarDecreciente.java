@@ -16,7 +16,6 @@ public class Ej23_InsertarDecreciente {
     }
 
     public static int buscarPos(int[] arr, int numAg) {
-        int pos = 0;
         for (int i = 0; i < arr.length; i++) {
             if (numAg > arr[i]) {
                 return i;
