@@ -18,7 +18,7 @@ public class Ej20_EliminarNum {
         if (pos != -1) {
             eliminarNum(arr, pos);
             mostrarArr(arr);
-        }else{
+        } else {
             System.out.println("ERROR! Su numero no se encontro en el arreglo.");
         }
     }
@@ -36,7 +36,7 @@ public class Ej20_EliminarNum {
         for (int i = pos; i < arr.length - 1; i++) {
             arr[i] = arr[i + 1];
         }
-        arr[arr.length-1]=0;
+        arr[arr.length - 1] = 0; // rellena con 0 el ultimo lugar.
     }
 
     public static void mostrarArr(int[] arr) {
